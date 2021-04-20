@@ -1,25 +1,21 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">fetch-cat-breeds</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="grid grid-cols-2 h-full">
+    <div class="flex flex-row-reverse bg-pink text-blue-dark">
+      <div class="flex flex-col justify-center max-w-4xl p-6">
+        <h1 class="text-4xl font-bold">fetch-cat-breeds</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, quae
+          nesciunt. Saepe dolores provident, eveniet delectus nihil nulla qui
+          dolore repudiandae fugiat. Corporis exercitationem tempora obcaecati
+          delectus reprehenderit expedita molestias?
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <div class="flex flex-col justify-center max-w-4xl w-full">
+        <div class="mx-auto max-w-lg">
+          <Cat />
+        </div>
       </div>
     </div>
   </div>
@@ -29,35 +25,4 @@
 export default {}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
+<style></style>
