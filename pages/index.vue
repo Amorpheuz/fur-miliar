@@ -141,9 +141,30 @@ export default {
     },
     async findBreeds() {
       if (this.searchStr) {
-        const searchRes = await this.$axios.$get(
-          `/server-middleware/getBreedInfo/?breed=${this.searchStr}&page=${this.pageNum}&limit=${this.countPerPage}`
-        )
+        const searchRes = await this.$axios
+          .$get(
+            `/getBreedInfo/?breed=${this.searchStr}&page=${this.pageNum}&limit=${this.countPerPage}`
+          )
+          .catch((error) => {
+            this.resultCount = 0
+            this.searchResults = []
+            if (error.response) {
+              this.error = {
+                errorCode: error.response.status,
+                error: error.response.data,
+              }
+            } else if (error.request) {
+              this.error = {
+                errorCode: 404,
+                error: 'No response received',
+              }
+            } else {
+              this.error = {
+                errorCode: 500,
+                error: 'Something went wrong',
+              }
+            }
+          })
         if (searchRes.success) {
           this.resultCount = searchRes.dataCount
           this.searchResults = searchRes.data

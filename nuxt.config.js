@@ -36,6 +36,9 @@ export default {
     '@nuxtjs/stylelint-module',
   ],
   modules: ['@nuxtjs/axios'],
+  axios: {
+    baseUrl: '/server-middleware',
+  },
   build: {},
   serverMiddleware: [
     {
