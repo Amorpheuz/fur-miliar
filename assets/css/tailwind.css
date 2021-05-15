@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-#__layout,
-#__nuxt,
-body,
-html {
-  @apply lg:h-full;
+.no-scroll {
+  overflow: hidden;
+}
+
+.icon-button {
+  @apply focus:bg-blue-dark focus:text-white hover:bg-blue-dark hover:text-white rounded-full;
 }

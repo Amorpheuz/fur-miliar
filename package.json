@@ -1,7 +1,17 @@
 {
-  "name": "fetch-cat-breeds",
+  "name": "fur~miliar",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Yash Dave",
+    "email": "connect@amorpheuz.dev",
+    "url": "https://amorpheuz.dev/"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Amorpheuz/fur-miliar#readme",
+  "bugs": {
+    "url": "https://github.com/Amorpheuz/fur-miliar/issues"
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -19,12 +29,17 @@
     }
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.13.1",
+    "body-parser": "^1.19.0",
     "core-js": "^3.9.1",
+    "express": "^4.17.1",
     "nuxt": "^2.15.3"
   },
   "devDependencies": {
+    "@nuxtjs/device": "^2.1.0",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/stylelint-module": "^4.0.0",
     "@nuxtjs/tailwindcss": "^4.0.3",
     "@tailwindcss/postcss7-compat": "^2.1.0",
     "autoprefixer": "9",
@@ -38,6 +53,8 @@
     "lint-staged": "^10.5.4",
     "postcss": "7",
     "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

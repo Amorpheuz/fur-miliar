@@ -40,6 +40,7 @@ module.exports = {
         DEFAULT: '#fffffe',
       },
       lavender: {
+        dark: '#6D5892',
         DEFAULT: '#A786DF',
         light: '#D9D4E7',
       },
@@ -47,11 +48,22 @@ module.exports = {
         dark: '#0E172C',
         DEFAULT: '#3E65C4',
       },
+      gray: {
+        DEFAULT: '#D1D5DB',
+        dark: '#4B5563',
+      },
     },
-    extend: {},
+    extend: {
+      height: {
+        menu: '13vh',
+        body: '87vh',
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+    },
   },
   plugins: [],
 }
