@@ -60,10 +60,18 @@
             />
           </div>
         </div>
-        <div v-else-if="!searchResults.length && !isLoading" class="mt-6">
-          <lazy-cat-404 v-if="error && Math.floor(error.errorCode) === 404" />
+        <div
+          v-else-if="
+            !searchResults.length &&
+            error &&
+            Object.keys(error).length &&
+            !isLoading
+          "
+          class="mt-6"
+        >
+          <lazy-cat-404 v-if="Math.floor(error.errorCode) === 404" />
           <p v-else>
-            Error {{ Math.floor(error.errorCode) }} : {{ error.error }}
+            Error {{ Math.floor(error.errorCode) }} : {{ error.error.error }}
           </p>
         </div>
       </div>
@@ -127,6 +135,7 @@ export default {
   },
   methods: {
     searchBreed() {
+      this.error = {}
       if (this.searchStr) {
         this.isLoading = true
         this.firstLoad = false
@@ -165,12 +174,12 @@ export default {
               }
             }
           })
-        if (searchRes.success) {
+        if (searchRes && searchRes.success) {
           this.resultCount = searchRes.dataCount
           this.searchResults = searchRes.data
           this.nextDisable =
             this.resultCount < (this.pageNum + 1) * this.countPerPage
-        } else if (searchRes.errorCode) {
+        } else if (searchRes && searchRes.errorCode) {
           this.resultCount = 0
           this.searchResults = []
           this.error = searchRes
