@@ -248,6 +248,7 @@ export default {
   },
   methods: {
     focusClose() {
+      this.imageLoading = true
       this.$nextTick(() => this.$refs.closeDialog.focus())
     },
   },
