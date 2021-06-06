@@ -1,16 +1,14 @@
+import metaTags from './utility/metaTags'
+
 export default {
   ssr: true,
   target: 'server',
   head: {
-    title: 'fetch-cat-breeds',
+    title: 'Fur~miliar',
     htmlAttrs: {
       lang: 'en',
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-    ],
+    meta: [...metaTags],
     link: [
       { rel: 'icon', type: 'image/svg+xml', href: '/furmiliar-favicon.svg' },
       {
