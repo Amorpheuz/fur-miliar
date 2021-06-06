@@ -8,7 +8,10 @@
       viewBox="0 0 389.656 58.197"
       version="1.2"
       class="overflow-visible h-6 md:h-10"
+      role="img"
+      aria-labelledby="furmiliar"
     >
+      <title id="furmiliar">Furmiliar</title>
       <defs>
         <symbol id="c" overflow="visible">
           <path
